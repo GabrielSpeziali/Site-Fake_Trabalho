@@ -73,4 +73,100 @@ body {
 }
 
 
+.main-banner {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 80%, #f3f3f3), 
+                url("/loja fake/assets/background_banner.jpg") no-repeat center top;
+    background-size: cover;
+    padding: 50px 20px;
+    min-height: 500px;
+    height: 100px;
+}
+
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 200px auto 0;
+}
+
+.card {
+    background-color: white;
+    padding: 16px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.card h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007185;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.scroll-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .products-scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 10px;
+    padding: 10px 0;
+  
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+  }
+
+  .products-scroll::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+  }
+  
+  .products-scroll img {
+    height: 220px;
+    flex-shrink: 0;
+    border-radius: 5px;
+  }
+  
+  .scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: rgba(255,255,255,0.9);
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  }
+  
+  .scroll-btn.left {
+    left: 10px;
+  }
+  
+  .scroll-btn.right {
+    right: 10px;
+  }
+  
+  
 
