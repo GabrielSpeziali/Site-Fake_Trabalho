@@ -28,9 +28,9 @@
         </div>
 
         <div class="top-right">
-            <a href="#">Contas e Listas</a>
+            <a href="#" onclick="abrirModal()">Conta</a>
             <a href="#">Pedidos</a>
-            <a href="#">🛒 Carrinho</a>
+            <a href="/loja fake/HTML/dados.html">🛒 Carrinho</a>
         </div>
     </header>
 
@@ -87,26 +87,20 @@
               <button class="scroll-btn right" onclick="scrollToRight('productScroll1')">&#10095;</button>
             </div>
           </section>
-          
-          <section class="product-row">
-            <h2>Mais Vendidos em Dispositivos Amazon e Acessórios</h2>
-            <div class="scroll-container">
-                <button class="scroll-btn left" onclick="scrollToLeft('productScroll2')">&#10094;</button>
-              <div class="products-scroll" id="productScroll">
-                <img src="/loja fake/assets/Produtos mais vendidos/1.jpg" alt="Produto 1">
-                <img src="/loja fake/assets/Produtos mais vendidos/2.jpg" alt="Produto 2">
-                <img src="/loja fake/assets/Produtos mais vendidos/3.jpg" alt="Produto 3">
-                <img src="/loja fake/assets/Produtos mais vendidos/4.jpg" alt="Produto 4">
-                <img src="/loja fake/assets/Produtos mais vendidos/5.jpg" alt="Produto 5">
-                <img src="/loja fake/assets/Produtos mais vendidos/6.jpg" alt="Produto 6">
-                <img src="/loja fake/assets/Produtos mais vendidos/7.jpg" alt="Produto 7">
-                <img src="/loja fake/assets/Produtos mais vendidos/8.jpg" alt="Produto 8">
-                <img src="/loja fake/assets/Produtos mais vendidos/9.jpg" alt="Produto 9">
-                <img src="/loja fake/assets/Produtos mais vendidos/10.jpg" alt="Produto 10">
-              </div>
-              <button class="scroll-btn right" onclick="scrollToRight('productScroll2')">&#10095;</button>
-            </div>
-          </section>
     </main>
+
+    <div id="modalCadastro" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="fecharModal()">&times;</span>
+          <h2>Cadastro</h2>
+          <form id="formCadastro">
+            <input type="text" id="nome" placeholder="Nome completo" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="senha" placeholder="Senha" required>
+            <input type="text" id="cpf" placeholder="CPF" maxlength="14">
+            <button type="submit" onclick="cadastrarUsuario(event)">Cadastrar</button>
+          </form>
+        </div>
+      </div>      
 </body>
 </html>

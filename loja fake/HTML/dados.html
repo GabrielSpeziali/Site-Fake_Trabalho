@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usuários Cadastrados</title>
+  <script src="/loja fake/JS/script.js" defer></script>
+</head>
+<body>
+  <h1>Usuários Cadastrados</h1>
+  <div id="listaUsuarios"></div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const listaUsuarios = document.getElementById('listaUsuarios');
+      const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+  
+      if (usuarios.length > 0) {
+        usuarios.forEach(usuario => {
+          const userElement = document.createElement('div');
+          userElement.classList.add('user-card');
+          userElement.innerHTML = `
+            <h3>${usuario.nome}</h3>
+            <p>Email: ${usuario.email}</p>
+            <p>CPF: ${usuario.cpf}</p>
+          `;
+          listaUsuarios.appendChild(userElement);
+        });
+      } else {
+        listaUsuarios.innerHTML = '<p>Nenhum usuário cadastrado.</p>';
+      }
+    });
+  </script>
+  
+</body>
+</html>
